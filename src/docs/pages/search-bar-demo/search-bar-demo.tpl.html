@@ -69,3 +69,18 @@
         '></gtx-highlighted-code>
     </div>
 </gtx-demo-block>
+
+<gtx-demo-block demoTitle="Empty search event check">
+    <div class="demo-result">
+        <gtx-search-bar (clear)="newTerm = ''"
+                        [(ngModel)]="newTerm"></gtx-search-bar>
+        Model: <code>{{ newTerm }}</code>
+    </div>
+    <div class="demo-code">
+        <gtx-highlighted-code language="HTML" code='
+                  <gtx-search-bar (clear)="newTerm = ``"
+                                  [(ngModel)]="newTerm"></gtx-search-bar>
+                  Model: <code>{{ newTerm }}</code>
+        '></gtx-highlighted-code>
+    </div>
+</gtx-demo-block>

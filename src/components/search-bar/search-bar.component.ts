@@ -95,7 +95,9 @@ export class SearchBar implements ControlValueAccessor {
     constructor(private changeDetector: ChangeDetectorRef) { }
 
     doSearch(): void {
+        console.log('query1: ', this.query);
         this.search.emit(this.query);
+        console.log('query2: ', this.query);
     }
 
     /**
@@ -104,6 +106,7 @@ export class SearchBar implements ControlValueAccessor {
     onKeyDown(event: KeyboardEvent): void {
         if (event.keyCode === 13) {
             this.doSearch();
+            console.log('query3: ', this.query);
         }
     }
 

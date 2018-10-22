@@ -11,5 +11,6 @@ export class SearchBarDemo {
     clearCount: number = 0;
 
     term: string = 'search term';
+    newTerm: string = '';
     hideClearButton: boolean = false;
 }
